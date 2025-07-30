@@ -1,4 +1,10 @@
+// serc/app/page.tsx
 import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home | PetShop",
+  description: "Venha conhecer mais ",
+};
 
 export default function Home() {
   return (
@@ -13,7 +19,3 @@ export default function Home() {
     </section>
   );
 }
-export const metadata: Metadata = {
-  title: "Home | PetShop",
-  description: "Venha conhecer mais ",
-};

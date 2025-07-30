@@ -1,5 +1,11 @@
+// serc/app/sobre/page.tsx
 import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Sobre | PetShop",
+  description: "Missão Visão e valores",
+};
 
 export default function Sobre() {
   return (
@@ -14,7 +20,3 @@ export default function Sobre() {
     </section>
   );
 }
-export const metadata: Metadata = {
-  title: "Sobre | PetShop",
-  description: "Conheça mais sobre nós",
-};

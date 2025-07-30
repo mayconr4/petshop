@@ -1,3 +1,4 @@
+// serc/app/layout.tsx
 import type { Metadata } from "next";
 import { Roboto, Fjalla_One } from "next/font/google";
 import "./globals.css";
@@ -36,8 +37,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body>
-        <header className={`${roboto.variable} ${fjallaOne.variable}`}>
+      <body className={`${roboto.variable} ${fjallaOne.variable}`}>
+        <header>
           <h1>PetShop</h1>
         </header>
         {children}

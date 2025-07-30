@@ -1,6 +1,12 @@
+// serc/app/contato/page.tsx
 import { Metadata } from "next";
 import { title } from "process";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Contato | PetShop",
+  description: "Fale conosco...",
+};
 
 export default function Contato() {
   return (
@@ -15,8 +21,3 @@ export default function Contato() {
     </section>
   );
 }
-
-export const metadata: Metadata = {
-  title: "Contato | PetShop",
-  description: " veja o Nosso contato ",
-};
