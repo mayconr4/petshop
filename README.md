@@ -3,6 +3,15 @@
 Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase
 (Baas - Back-End as a Service).
 
+## 01_css-global-fonts-faviocn-metadados
+
+- Adição de estilos globais
+- Importação, configuração e aplicação de fonts da web usando `next/fonts`
+- Adição de mais metadados
+- Aplicação automática de favicon adicionando arquivo `icon.png` direto na pasta `app`
+
+---
+
 ## 00_projeto-zerado
 
 Ajustes e remosões e exclusões de elmentos da instalação padrão do Next.js

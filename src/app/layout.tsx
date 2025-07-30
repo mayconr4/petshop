@@ -1,20 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Fjalla_One } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+/* Coinfigura varáveis paras as fontes */
+const roboto = Roboto({
   subsets: ["latin"],
+  weight: ["300", "700"],
+  variable: "--font-roboto",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fjallaOne = Fjalla_One({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-fjalla",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "PetShop",
   description: "Mini portal de Petshop com noticías, produtos e muito mais",
+  keywords: ["petshop", "animais", "cachorros", "gatos"],
+  authors: [
+    {
+      name: "Maycon",
+      url: "https://github.com/mayconR4",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -25,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <header>
+        <header className={`${roboto.variable} ${fjallaOne.variable}`}>
           <h1>PetShop</h1>
         </header>
         {children}
