@@ -1,6 +1,7 @@
 // serc/app/produtos/page.tsx
 import { Metadata } from "next";
 import React from "react";
+import estilos from "./produtos.module.css";
 
 export const metadata: Metadata = {
   title: "Produtos | PetShop",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Produtos() {
   return (
-    <section>
+    <section className={estilos.conteudo}>
       <h2>Produtos</h2>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eveniet,

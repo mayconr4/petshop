@@ -1,5 +1,6 @@
 // serc/app/page.tsx
 import { Metadata } from "next";
+import estilos from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Home | PetShop",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section>
+    <section className={estilos.conteudo}>
       <h2>Pet Notícias</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam
