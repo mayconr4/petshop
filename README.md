@@ -10,6 +10,10 @@ Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase
 - Adição do componente `<Link>` para navegação entre as rotas
 - Ajustes diversos de estrutura HTML
 
+### 31/07
+
+No componente `Menu.tsx`, faça a programação necessária para detectar qual rota/página no momento e,com isso deixar a classe `ativo` aplicada ao `Link` correspondente.
+
 ---
 
 ## 01_css-global-fonts-faviocn-metadados
