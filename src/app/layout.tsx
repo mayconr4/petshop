@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Roboto, Fjalla_One } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import Cabecalho from "@/components/cabecalho/page";
+import Cabecalho from "@/components/Cabecalho";
 
 /* Coinfigura varáveis paras as fontes */
 const roboto = Roboto({
