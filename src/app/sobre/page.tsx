@@ -12,6 +12,7 @@ export default function Sobre() {
   return (
     <section className={estilos.conteudo}>
       <h2>Sobre Nós</h2>
+
       <h3>Missão</h3>
       <p>
         Nossa missão é proporcionar o melhor cuidado e bem-estar para os animais
@@ -25,6 +26,7 @@ export default function Sobre() {
         dos nossos amigos de quatro patas.
       </p>
       <h3>Valores</h3>
+
       <p>
         Nossos valores incluem amor pelos animais, compromisso com a qualidade,
         respeito ao meio ambiente e dedicação ao atendimento ao cliente.

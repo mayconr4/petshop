@@ -2,6 +2,7 @@
 import { Metadata } from "next";
 import React from "react";
 import estilos from "./produtos.module.css";
+import Container from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Produtos | PetShop",
@@ -12,6 +13,7 @@ export default function Produtos() {
   return (
     <section className={estilos.conteudo}>
       <h2>Produtos</h2>
+
       <p>
         Aqui você encontrará uma lista de produtos disponíveis no PetShop.
         Descubra tudo o que temos a oferecer para o seu pet!
