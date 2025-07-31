@@ -14,11 +14,12 @@ export default function Contato() {
     <section className={estilos.conteudo}>
       <h2>Contato</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquam
-        ipsa voluptas, deleniti aperiam numquam exercitationem! At obcaecati
-        quia blanditiis, sed velit odit, incidunt fuga maxime earum doloribus
-        maiores vel.
+        Você pode nos enviar um e-mail para{" "}
+        <a href="mailto:contato@petshop.com">contato@petshop.com</a> ou nos
+        ligar pelo telefone <a href="tel:+5511999999999">+55 11 99999-9999</a>
       </p>
+
+      <p>Se preferir, use o formulário abaixo:</p>
     </section>
   );
 }
