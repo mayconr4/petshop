@@ -6,6 +6,7 @@ import { Post } from "@/types/Post";
 
 export default async function Home() {
   const reposta = await fetch(`http://localhost:2112/posts`, {
+    // Revalidamos o cache do next a cada requisição para garantir que os dados estejam sempre atualizados
     next: { revalidate: 0 },
   });
 
@@ -20,7 +21,7 @@ export default async function Home() {
     <section className={estilos.conteudo}>
       <h2>Pet Notícias</h2>
       <p>Aqui você encontra as últimas notícias sobre Pets.</p>
-      <ListaPosts posts={arrayPosts} />
+      <ListaPosts posts={posts} />
     </section>
   );
 }
