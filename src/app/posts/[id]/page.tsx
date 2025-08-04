@@ -16,6 +16,7 @@ interface DetalhePostProps {
 - O retorno da função DEVE SER uma Promise
 - Não se esqueça de chamar/usar esta nova função dentro do generateMetadata e do DetalhePost no lugar do código que vc irá remover. */
 // export async function buscarPostPorId():Promise<Post> {
+
 async function buscarPostPorId(id: string): Promise<Post> {
   const resposta = await fetch(`http://localhost:2112/posts/${id}`, {
     next: { revalidate: 0 },
