@@ -1,14 +1,13 @@
-// serc/app/layout.tsx
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Roboto, Fjalla_One } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import Cabecalho from "@/components/Cabecalho";
 
-/* Coinfigura varáveis paras as fontes */
+/* Configura variáveis para as fontes */
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["300", "700"],
+  weight: ["400", "700"],
   variable: "--font-roboto",
   display: "swap",
 });
@@ -22,12 +21,12 @@ const fjallaOne = Fjalla_One({
 
 export const metadata: Metadata = {
   title: "PetShop",
-  description: "Mini portal de Petshop com noticías, produtos e muito mais",
+  description: "Mini portal do PetShop com notícias, produtos e muito mais",
   keywords: ["petshop", "animais", "cachorros", "gatos"],
   authors: [
     {
-      name: "Maycon",
-      url: "https://github.com/mayconR4",
+      name: "Tiago",
+      url: "https://github.com/tiagotecinternet24",
     },
   ],
 };

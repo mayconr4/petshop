@@ -1,4 +1,4 @@
-//src/components/Cabecalho.tsx
+// src/components/Cabecalho.tsx
 import Link from "next/link";
 import Menu from "./Menu";
 import estilos from "./Cabecalho.module.css";
@@ -12,11 +12,11 @@ export default function Cabecalho() {
           <Link href="/">
             <Image
               src="/images/logo.png"
-              alt="Patinha dentro do coração"
+              alt="Patinha dentro de um coração"
               width={48}
               height={48}
             />
-            Petshop
+            PetShop
           </Link>
         </h1>
         <Menu />
@@ -24,4 +24,3 @@ export default function Cabecalho() {
     </header>
   );
 }
-// uselocation fazer o link ficar ativo até clicar em outro=

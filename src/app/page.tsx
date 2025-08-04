@@ -1,22 +1,14 @@
-// serc/app/page.tsx
-import { Metadata } from "next";
+// src/app/page.tsx
+import ListaPosts from "@/components/ListaPosts";
 import estilos from "./page.module.css";
-
-export const metadata: Metadata = {
-  title: "Home | PetShop",
-  description: "Venha conhecer mais ",
-};
+import arrayPosts from "@/data/array-posts";
 
 export default function Home() {
   return (
     <section className={estilos.conteudo}>
       <h2>Pet Notícias</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam
-        expedita! Aperiam sunt veritatis voluptatum repellendus magni delectus
-        dolorum fuga aspernatur architecto placeat reprehenderit porro culpa,
-        neque saepe et minima!
-      </p>
+      <p>Aqui você encontra as últimas notícias sobre Pets.</p>
+      <ListaPosts posts={arrayPosts} />
     </section>
   );
 }

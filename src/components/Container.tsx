@@ -1,5 +1,4 @@
 // src/components/Container.tsx
-import { strict } from "assert";
 import estilos from "./Container.module.css";
 
 type ContainerProps = {

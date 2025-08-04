@@ -1,24 +1,15 @@
-// src/components/Menu.tsx
-"use client"; // necessário para usar hooks no Client Component
+"use client";
 
+// src/components/Menu.tsx
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
 import estilos from "./Menu.module.css";
+import { usePathname } from "next/navigation";
 
 export default function Menu() {
   const pathname = usePathname();
-
   return (
     <nav className={estilos.menu}>
-      <Link
-        href="/"
-        className={
-          pathname === "/"
-            ? /*se for === as / passo a estilos.ativo caso não for desativo a estilização */ estilos.ativo
-            : ""
-        }
-      >
+      <Link href="/" className={pathname === "/" ? estilos.ativo : ""}>
         Blog
       </Link>
       <Link
