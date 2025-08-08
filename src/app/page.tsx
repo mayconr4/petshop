@@ -2,6 +2,7 @@
 import ListaPosts from "@/components/ListaPosts";
 import estilos from "./page.module.css";
 import { Post } from "@/types/Post";
+import SemPosts from "@/components/SemPosts";
 
 export default async function Home() {
   const reposta = await fetch(`http://localhost:2112/posts`, {
@@ -19,8 +20,13 @@ export default async function Home() {
   return (
     <section className={estilos.conteudo}>
       <h2>Pet Notícias</h2>
-      <p>Aqui você encontra as últimas notícias sobre Pets.</p>
-      <ListaPosts posts={posts} />
+
+      {/* Renderização CONDICIONAL 
+      
+Se não tiver posts, então renderize o componente Semposts Caso contrário, renderize o ListaPosts      
+      */}
+      {posts.length === 0 ? <SemPosts /> : <ListaPosts posts={posts} />}
+      <ListaPosts posts={[]} />
     </section>
   );
 }
