@@ -6,17 +6,17 @@ import SemPosts from "@/components/SemPosts";
 import arrayPosts from "@/data/array-posts";
 
 export default async function Home() {
-  const reposta = await fetch(`http://localhost:2112/posts`, {
-    // Revalidamos o cache do next a cada requisição para garantir que os dados estejam sempre atualizados
-    next: { revalidate: 0 },
-  });
+  // const reposta = await fetch(`http://localhost:2112/posts`, {
+  //   // Revalidamos o cache do next a cada requisição para garantir que os dados estejam sempre atualizados
+  //   next: { revalidate: 0 },
+  // });
 
-  if (!reposta.ok) {
-    throw new Error("Erro ao buscar os posts: " + reposta.statusText);
-  }
+  // if (!reposta.ok) {
+  //   throw new Error("Erro ao buscar os posts: " + reposta.statusText);
+  // }
 
-  const posts: Post[] = await reposta.json();
-  console.log(posts);
+  // const posts: Post[] = await reposta.json();
+  // console.log(posts);
 
   return (
     <section className={estilos.conteudo}>
@@ -26,7 +26,11 @@ export default async function Home() {
       
 Se não tiver posts, então renderize o componente Semposts Caso contrário, renderize o ListaPosts      
       */}
-      {posts.length === 0 ? <SemPosts /> : <ListaPosts posts={arrayPosts} />}
+      {arrayPosts.length === 0 ? (
+        <SemPosts />
+      ) : (
+        <ListaPosts posts={arrayPosts} />
+      )}
     </section>
   );
 }
