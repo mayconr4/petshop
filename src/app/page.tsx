@@ -26,7 +26,6 @@ export default async function Home() {
 Se não tiver posts, então renderize o componente Semposts Caso contrário, renderize o ListaPosts      
       */}
       {posts.length === 0 ? <SemPosts /> : <ListaPosts posts={posts} />}
-      <ListaPosts posts={[]} />
     </section>
   );
 }
