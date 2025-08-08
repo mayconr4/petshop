@@ -15,7 +15,7 @@ export default function ListaPosts({ posts }: ListaPostsProps) {
     <div className={estilos.posts}>
       {posts.map(({ id, titulo, subtitulo }) => (
         <article key={id}>
-          <Link href={`/posts/${id}`}>
+          <Link href="/">
             <h3>{titulo}</h3>
             <p>{subtitulo}</p>
           </Link>

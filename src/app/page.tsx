@@ -3,6 +3,7 @@ import ListaPosts from "@/components/ListaPosts";
 import estilos from "./page.module.css";
 import { Post } from "@/types/Post";
 import SemPosts from "@/components/SemPosts";
+import arrayPosts from "@/data/array-posts";
 
 export default async function Home() {
   const reposta = await fetch(`http://localhost:2112/posts`, {
@@ -25,8 +26,7 @@ export default async function Home() {
       
 Se não tiver posts, então renderize o componente Semposts Caso contrário, renderize o ListaPosts      
       */}
-      {posts.length === 0 ? <SemPosts /> : <ListaPosts posts={posts} />}
-      <ListaPosts posts={[]} />
+      {posts.length === 0 ? <SemPosts /> : <ListaPosts posts={arrayPosts} />}
     </section>
   );
 }
