@@ -5,26 +5,21 @@ import { Post } from "@/types/Post";
 import SemPosts from "@/components/SemPosts";
 
 export default async function Home() {
-  const reposta = await fetch(`http://localhost:2112/posts`, {
-    // Revalidamos o cache do next a cada requisição para garantir que os dados estejam sempre atualizados
+  const resposta = await fetch(`http://localhost:2112/posts`, {
     next: { revalidate: 0 },
   });
 
-  if (!reposta.ok) {
-    throw new Error("Erro ao buscar os posts: " + reposta.statusText);
+  if (!resposta.ok) {
+    throw new Error("Erro ao buscar os posts: " + resposta.statusText);
   }
 
-  const posts: Post[] = await reposta.json();
-  console.log(posts);
+  const posts: Post[] = await resposta.json();
 
   return (
     <section className={estilos.conteudo}>
       <h2>Pet Notícias</h2>
 
-      {/* Renderização CONDICIONAL 
-      
-Se não tiver posts, então renderize o componente Semposts Caso contrário, renderize o ListaPosts      
-      */}
+      {/* Renderização condicional */}
       {posts.length === 0 ? <SemPosts /> : <ListaPosts posts={posts} />}
     </section>
   );

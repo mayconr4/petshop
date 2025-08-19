@@ -4,19 +4,21 @@ Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas -
 
 ## 07_componentes-SemPosts-e-notFound-da-rota-de-posts
 
-- Criação do componente `SemPosts` e Aplicação de renderização condicional na page `Home`
-- Criação da page `not-found.tsx` e Aplicação na rota dinâmica de posts usando verificação de erro status 404 e chamada da função `notFound()`.
+- Criação do componente `SemPosts.tsx` e aplicação de renderização condicional na page `Home`
+- Criação da page `not-found.tsx` e aplicação na rota dinâmica de posts usando verificação de erro status 404 e chamada da função `notFound()`.
+
+---
 
 ## 06_fake-api-usando-json-server-e-aplicando-rota-dinamica
 
-- Intalação e configuração do `json-server` como dependência de desenvolvedor Para Instalar: `npm install json-server --save-dev`
+- Instalação e configuração do `json-server` como dependência de desenvolvedor: Para instalar: `npm install json-server --save-dev`
 - Utilização do `fetch` com `async/await` na página Home para consumir os posts da fake-api
+- Exclusão do array de posts
 - Substituição do array fixo de posts por dados da fake-api
-- Configuração de rota dinâmica com carregamento de dados a partir de parâmtros da rota
+- Configuração de rota dinâmica com carregamento de dados a partir de parâmetros da rota
 - Uso de `Promise` como tipo para a prop `params`
 - Geração de metadados dinâmicos usando a função `generateMetadata`
-- Refatoração da programação de busca de dados na fake-api usando uma
-  função dedicada (`buscarPostPorId`)
+- Refatoração da programação de busca de dados na fake-api usando uma função dedicada (`buscarPostPorId`)
 
 ---
 
