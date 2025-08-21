@@ -2,6 +2,40 @@
 
 Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas - Back-End as a Service).
 
+## 09_migrando-api-para-supabase
+
+### No site supabase.com
+
+- Cadastro no Supabase usando a conta do Github
+- Criação e configuração de um projeto dentro do Supabase
+- Criação da tabela `posts` com os campos:
+
+  - id (uuid), pk
+  - titulo (text), not null
+  - subtitulo (text), not null
+  - descricao (text), not null
+
+- Importação dos dados para a tabela usando o formato `csv`
+- Adição de uma politica de segurança para `SELECT` público
+- Instalação da lib `npm install @supabase/supabase-js`
+
+### No projeto PetShop (VSCode)
+
+#### Configuração geral
+
+- Instalação da lib `npm install @ supabase/supabase-js`
+- Criação do arquivo contendo variáveis de ambiente: `.env.local`, com a aplicação das variáveis `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Obs.: O coonteúdo para este arquivo está
+  Pronto em sua conta no Supabase, dentro do botão **CONNECT**.
+- Criação da pasta `lib` e do arquivo `supabase.ts`
+
+#### Pádinas Home (app/page.tsx) DetalhePost (app/post/[id]/page.tsx)
+
+- Subistituição da função `fetch` e do acesso á fake-api pela função e recursos do supabase
+- Ajustes nas verificações de erro
+- Criação de um componente especial de `loading` (exibindo enquanto o processamento dos posts está acontecendo)
+
+---
+
 ## 08_filtro-de-categorias
 
 ### Resumo do ciclo de comunicação da prop que passa uma função do pai (ListaPosts)
@@ -19,6 +53,8 @@ para o filho (FiltroCategorias)
 Em resumo, o filho **não mudo o estado sozinho**. Ele só **avisa** o pai.
 
 Quem tem o estado, tem o controle.
+
+---
 
 ## 07_componentes-SemPosts-e-notFound-da-rota-de-posts
 
