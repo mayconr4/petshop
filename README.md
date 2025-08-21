@@ -4,6 +4,8 @@ Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas -
 
 ## 10_rotinas-do-formulario-de-contato
 
+t
+
 - Criação do componente `Formulario` e importação na página de Contato
 - Programação de uma **ação de servidor (server action)**: `lib/enviar-contato.ts`:
   - É uma função que executa no back-end, por isso, a diretiva `'use-server'`
