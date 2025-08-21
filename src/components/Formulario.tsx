@@ -46,6 +46,7 @@ export default function Formulario() {
       <div className={estilos.campo}>
         <label htmlFor="nome">Nome</label>
         <input
+          required
           type="text"
           name="nome"
           id="nome"
@@ -55,6 +56,7 @@ export default function Formulario() {
       <div className={estilos.campo}>
         <label htmlFor="email">E-mail</label>
         <input
+          required
           type="text"
           name="email"
           id="email"
@@ -64,6 +66,7 @@ export default function Formulario() {
       <div className={estilos.campo}>
         <label htmlFor="mensagem">Mensagem: </label>
         <textarea
+          required
           name="mensagem"
           id="mensagem"
           rows={5}
@@ -73,6 +76,12 @@ export default function Formulario() {
       <div className={estilos.campo}>
         <BotaoEnviar />
       </div>
+
+      {mensagem && (
+        <p className={`${estilos.mensagem} ${estilos[tipoMensagem]}`}>
+          {mensagem}
+        </p>
+      )}
     </form>
   );
 }
